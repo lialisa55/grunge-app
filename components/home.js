@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>Gêneros de anime</Text>
       <Image source={require('../assets/shoujo.png')} />
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>{props.navigation.navigate('Shoujo')}}>
         <Text>Shoujo</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>{props.navigation.navigate('Shounen')}}>
         <Text>Shounen</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>{props.navigation.navigate('Seinen')}}>
         <Text>Seinen</Text>
       </TouchableOpacity>
     </View>

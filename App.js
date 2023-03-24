@@ -1,26 +1,13 @@
 import * as React from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import {StatusBar} from 'react-native';
 
-export default function Shoujo() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.paragraph}>Gêneros de anime</Text>
-      <Image source={require('./assets/shoujo.png')}/>
-    </View>
+import Rotas from './components/rotas';
+
+export default function App(){
+  return(
+    <>
+    <StatusBar/>
+    <Rotas/>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
